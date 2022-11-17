@@ -27,4 +27,8 @@ export class TodosComponent implements OnInit {
       return value;
     });
   }
+
+  deleteTodo(id: number) {
+    this.todos = this.todos?.filter((value, index) => index !== id);
+  }
 }
